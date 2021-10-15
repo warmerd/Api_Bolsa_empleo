@@ -11,6 +11,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Api_Bolsa_empleo.Entities;
+using Microsoft.EntityFrameworkCore;
 
 namespace Api_Bolsa_empleo
 {
@@ -32,6 +34,9 @@ namespace Api_Bolsa_empleo
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Api_Bolsa_empleo", Version = "v1" });
             });
+            var conexion = "Server = elite007.database.windows.net; Database =empleo; User Id =yeisonsiri; Password =Yanelis2020;";
+            services.AddDbContext<empleoContext>(options=>options.UseSqlServer(conexion));
+            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

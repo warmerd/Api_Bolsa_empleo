@@ -18,6 +18,6 @@ namespace Api_Bolsa_empleo.Entities
         public string Email { get; set; }
         public DateTime? Fecha { get; set; }
 
-        public virtual Categoria IdCategoriasNavigation { get; set; }
+       // public virtual Categoria IdCategoriasNavigation { get; set; }
     }
 }
